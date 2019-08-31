@@ -12,9 +12,7 @@
       </v-flex>
 
       <v-flex xs4>
-        <v-card dark color="primary">
-          <v-card-text class="px-0">Sidebar</v-card-text>
-        </v-card>
+ 		<app-sidebar></app-sidebar>
       </v-flex>
 
   </v-layout>
@@ -23,6 +21,7 @@
 
 <script>
 	import Question from './Question'
+	import AppSidebar from './AppSidebar'
 	export default {
 		data() {
 			return {
@@ -30,7 +29,8 @@
 			}
 		},
 		components: {
-			Question
+			Question,
+			AppSidebar
 		},
 		created() {
 			axios.get('/api/question')
